@@ -64,11 +64,7 @@ Repository Structure
 |-----------------------------------|-------------------------------------------------------------------------|
 | AHP_WorldCup2026_Favorites.xlsx   | All AHP steps: Dataset, Criteria_Pairwise, Consistency, Decision_Matrix, Results. |
 | run_ahp_worldcup.py               | Minimal Python runner (reads Results, exports CSV, plots chart).       |
-| ahp_worldcup2026_results.csv      | Exported results (sorted) from Python.                                 |
 | ahp_worldcup2026_barh.png         | Horizontal bar chart with in-bar % labels.                             |
-| README_AHP_WorldCup2026.md        | Original notes (optional).                                             |
-| requirements.txt                  | Minimal dependencies: pandas, matplotlib, openpyxl.                    |
-| .gitignore                        | Standard Python/Spyder ignores.                                        |
 | README.md                         | This document.                                                         |
 
 How to Run Locally
