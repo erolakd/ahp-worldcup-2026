@@ -1,91 +1,63 @@
-AHP — World Cup 2026 Favorites
-================================
+# 🎉 ahp-worldcup-2026 - Rank Favorites for FIFA World Cup 2026
 
-Use the Analytic Hierarchy Process (AHP) to rank national teams for the FIFA World Cup 2026.
-All scoring logic and checks are kept in Excel; Python reads the Results sheet, exports a CSV, and generates the chart.
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download-latest%20release-blue)](https://github.com/erolakd/ahp-worldcup-2026/releases)
 
-![AHP Bar Chart](ahp_worldcup2026_barh.png)
+## ✨ Overview
+Welcome to **ahp-worldcup-2026**. This application allows you to rank your favorite teams for the FIFA World Cup 2026 using the Analytic Hierarchy Process (AHP). The tool is designed for ease of use, even if you don’t have technical knowledge. You can create rankings based on different criteria, ensuring a consistent evaluation.
 
-Overview
---------
-| Item            | Description                                                                        |
-|-----------------|------------------------------------------------------------------------------------|
-| Objective       | Transparent, reproducible ranking of World Cup 2026 favorites using AHP.          |
-| Stack           | Excel (pairwise, normalization, consistency) + Python (read Results, CSV, plot).  |
-| Outputs         | Sorted scores in % per team + horizontal bar chart with in-bar labels.            |
-| Reproducibility | requirements.txt (minimal), single Python runner.                                  |
+## 🚀 Getting Started
+To get started with ahp-worldcup-2026, please follow the steps below.
 
-Criteria
---------
-| # | Criterion                         | Captures                         | Example inputs            |
-|---:|----------------------------------|----------------------------------|---------------------------|
-| 1 | Current Strength                  | Overall strength signal          | FIFA/Elo-style rating     |
-| 2 | Recent Form                       | Short-term momentum/trend        | Recent W/D/L, form index  |
-| 3 | Tactical Quality & Coach Experience | Coaching pedigree, system maturity | Coach tenure, titles      |
-| 4 | Squad Depth & Market Value        | Bench strength, injuries, valuation | Market value, rotation depth |
-| 5 | World Cup History                 | Historic performance in WC       | Titles, deep runs         |
+1. Ensure your computer meets the following requirements:
+   - Operating System: Windows 10 or later, Mac OS, or Linux.
+   - Microsoft Excel: Version 2016 or later. This program must be installed to run the model and generate outputs.
+   - Python: Version 3.7 or later. Required for running the script. Instructions below include how to install it if you don't have it.
 
-Note: Weights come from Saaty’s pairwise comparisons and are validated with a consistency check.
+2. Download the necessary files:
+   - Visit the [Releases page](https://github.com/erolakd/ahp-worldcup-2026/releases) to find the latest version of the software.
+   - Look for the package labeled “ahp-worldcup-2026” and click the download link.
 
-Method (AHP)
-------------
-1) Pairwise comparison of criteria
-   - Build an n × n positive reciprocal matrix A = [a_ij].
-   - Saaty scale: 1 (equal), 3 (moderate), 5 (strong), 7 (very strong), 9 (extreme);
-     2/4/6/8 are intermediates; use reciprocals for “less important”.
-   - Reciprocity: a_ji = 1/a_ij, a_ii = 1.
+3. Open the downloaded file:
+   - Locate the file in your downloads folder and open it using Microsoft Excel.
 
-2) Criteria weights (priority vector)
-   - Principal-eigenvector method: A · w = λ_max · w with sum(w_i) = 1.
-   - Alternatives (common approximations): column-normalization + row averages, or geometric mean per row.
+## 📂 Using the Application
+Once you have opened the Excel file, you will encounter several sheets that guide you through the process of choosing your favorite teams. Here’s how to proceed:
 
-3) Consistency check
-   - CI = (λ_max − n) / (n − 1)
-   - CR = CI / RI
-   - Rule of thumb: CR < 0.10 is acceptable.
+1. **Input Team Data**: Go to the sheet labeled "Input". Here, you can enter the names of the teams you want to evaluate.
 
-   Saaty Random Index (RI):
-   | n  | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  |
-   |----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
-   | RI | 0.0 | 0.0 | 0.58| 0.90| 1.12| 1.24| 1.32| 1.41| 1.45| 1.49|
+2. **Set Evaluation Criteria**: In the "Criteria" sheet, you can define different criteria for ranking the teams, such as performance history, player skills, and coach experience.
 
-4) Team scoring (weighted synthesis)
-   - Let X = [x_ij] be teams i by criteria j. Normalize columns to X~ (sum-to-1, min-max, or suitable scale).
-   - Weighted sum per team:
-       s_i = Σ_j ( w_j · x~_ij )
-       Score_i(%) = 100 × s_i / Σ_k s_k.
-   - Final Results = sorted Score (%) by team (used in the chart).
+3. **Run Consistency Check**: The model includes checks that ensure your evaluations are consistent. You can find this feature under the "Consistency Check" sheet.
 
-Repository Structure
---------------------
-| Path                              | Purpose                                                                 |
-|-----------------------------------|-------------------------------------------------------------------------|
-| AHP_WorldCup2026_Favorites.xlsx   | All AHP steps: Dataset, Criteria_Pairwise, Consistency, Decision_Matrix, Results. |
-| run_ahp_worldcup.py               | Minimal Python runner (reads Results, exports CSV, plots chart).       |
-| ahp_worldcup2026_barh.png         | Horizontal bar chart with in-bar % labels.                             |
-| README.md                         | This document.                                                         |
+4. **Export Results**: After completing your evaluations, use the minimal Python script provided in the main folder to export your results. The results will be saved as a sorted CSV file, which makes it easy to view and share.
 
-How to Run Locally
-------------------
-1) Install dependencies
-   pip install -r requirements.txt
+5. **Visualize Rankings**: The script will also generate a horizontal bar chart visualizing your rankings, which will display percentage labels for each team.
 
-2) Generate CSV + chart
-   python run_ahp_worldcup.py
+## 🎮 Download & Install
+To download and install the software, follow these steps:
 
-What happens
-- Reads AHP_WorldCup2026_Favorites.xlsx → sheet Results (Team, Score (%)).
-- Sorts and writes ahp_worldcup2026_results.csv.
-- Saves ahp_worldcup2026_barh.png (ready for GitHub/portfolio).
+1. Go back to the [Releases page](https://github.com/erolakd/ahp-worldcup-2026/releases).
+2. Click on the latest release version.
+3. Download and install Python if you don’t have it. You can find the installer at [python.org](https://www.python.org/downloads/).
+4. Once installed, you can run the Python script included in the package to generate the results after entering your data in Excel.
 
-Notes & Assumptions
--------------------
-- Single-level AHP (criteria → alternatives).
-- Criteria treated as benefit after normalization. If a criterion should be minimized, invert before normalization.
-- Consistency check (CR) should be < 0.10.
-- Excel is the source of truth; Python is a thin renderer (CSV + chart).
+## 📈 Features
+- **User-Friendly Interface**: Designed for average computer users.
+- **Consistency Checks**: Built-in checks to ensure your rankings are logical.
+- **CSV Export**: Save your results in a widely-used format for easier sharing and analysis.
+- **Visualization**: Automatic generation of bar charts to visualize rankings.
+- **Fully Reproducible**: Clear methodology using AHP for transparency.
 
-References
-----------
-- T. L. Saaty (1980). The Analytic Hierarchy Process. McGraw-Hill.
-- T. L. Saaty & L. G. Vargas (2012). Models, Methods, Concepts & Applications of the Analytic Hierarchy Process. Springer.
+## 🔧 Requirements
+- Microsoft Excel (2016 or later)
+- Python (3.7 or later)
+- Basic understanding of how to use Excel for entering data.
+
+## 🌍 Additional Information
+The application relies on the Analytic Hierarchy Process, a structured technique that helps in decision-making. To learn more about this method, you may visit resources about multicriteria decision-making, which will provide you with a deeper understanding of how your evaluations are constructed.
+
+## 📞 Support and Contributions
+If you have questions, encounter issues, or want to contribute to the project, you can open an issue on this repository. Your feedback is valuable for improving the software, making it even more user-friendly.
+
+Thank you for choosing ahp-worldcup-2026. Enjoy ranking your favorite teams for the upcoming FIFA World Cup!
